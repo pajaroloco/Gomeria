@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="GomeriaPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>IO.CodigoDeVelocidad</class>
+    <class>IO.Compra</class>
+    <class>IO.DetalleDeCompra</class>
+    <class>IO.DetalleDeVenta</class>
+    <class>IO.IndiceDeCarga</class>
+    <class>IO.Producto</class>
+    <class>IO.Proveedor</class>
+    <class>IO.Venta</class>
+    <class>IO.Usuario</class>
+    <class>IO.Empleado</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/Gomeria"/>
+      <property name="javax.persistence.jdbc.user" value="postgres"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="123"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="hibernate.show_sql" value="True"/>
+    </properties>
+  </persistence-unit>
+</persistence>
